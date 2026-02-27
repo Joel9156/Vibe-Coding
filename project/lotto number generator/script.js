@@ -1,4 +1,4 @@
-// 1. '추첨하기' 버튼을 누르면 입력창을 보여주는 함수
+// 1. 'Draw Numbers' 버튼을 누르면 입력창을 보여주는 함수
 function showInput() {
     document.getElementById('start-btn').style.display = 'none';
     document.getElementById('input-section').style.display = 'block';
@@ -10,9 +10,9 @@ function drawLines() {
     const lineInput = document.getElementById('line-count');
     let count = parseInt(lineInput.value);
 
-    // 입력값 검증 (1 미만이거나 20 초과일 경우 경고)
+    // 입력값 검증 (1 미만이거나 20 초과일 경우 영문 경고)
     if (isNaN(count) || count < 1 || count > 20) {
-        alert('뉴질랜드 로또 규정에 따라 1줄에서 20줄 사이로 입력해주세요!');
+        alert('Please enter a number between 1 and 20 (NZ Lotto limit)!');
         lineInput.value = 5; // 입력값을 다시 5로 되돌림
         return;
     }
