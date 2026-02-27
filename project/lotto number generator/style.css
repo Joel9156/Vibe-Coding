@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    margin: 0;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* 제목 스타일링 */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.nz-flag {
+    height: 0.8em;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* 컨트롤 패널 */
+.controls {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #2ecc71;
+    transform: scale(1.05);
+}
+
+/* 입력창 구역 */
+#input-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.input-label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1.1rem;
+    width: 70px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    margin: 0 10px;
+    text-align: center;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #27ae60;
+}
+
+.notice-text {
+    font-size: 0.85rem;
+    color: #95a5a6;
+    margin-top: 8px;
+}
+
+/* 공 보드 영역 */
+.board {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    animation: slideUp 0.4s ease-out forwards;
+    opacity: 0; 
+}
+
+.ball {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: inset -2px -2px 6px rgba(0,0,0,0.2), 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.lotto-ball {
+    background: radial-gradient(circle at 30% 30%, #ffd700, #f39c12);
+    color: #333;
+}
+
+.power-ball {
+    background: radial-gradient(circle at 30% 30%, #ff5e62, #e74c3c);
+    color: white;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
